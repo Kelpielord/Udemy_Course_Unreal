@@ -21,17 +21,22 @@ int main()
 
     int n;
     int GuessOne, GuessTwo, GuessThree;
-    std::cin >> n;
-    for (size_t i = 0; i < n; i++)
-    {
-        std::cin >> GuessOne;
-        std::cin >> GuessTwo;
-        std::cin >> GuessThree;
 
-        std::cout << "You entered: " << GuessOne << GuessTwo << GuessThree;
-    }
+    std::cin >> GuessOne;
+    std::cin >> GuessTwo;
+    std::cin >> GuessThree;
     
-  
+    int GuessSum = GuessOne + GuessTwo + GuessThree;
+    int GuessProduct = GuessOne * GuessTwo * GuessThree;
+
+    if (GuessSum == CodeSum && GuessProduct == CodeProduct) 
+    {
+        std::cout << "You win!";
+    }
+    else 
+    {
+        std::cout << "You lose!";
+    }
 
     return 0;
 }
